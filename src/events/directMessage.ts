@@ -5,8 +5,12 @@ const directMessage: Middleware<SlackEventMiddlewareArgs<'message'>> = async ({
   say,
   payload,
 }) => {
-  logger.info(payload)
-  await say(`:wave:`)
+  try {
+    logger.info(payload)
+    await say(`:wave:`)
+  } catch (error) {
+    logger.error(error)
+  }
 }
 
 export { directMessage }

@@ -7,17 +7,17 @@ export const slackClient = new App({
   socketMode: true,
   appToken: process.env.SLACK_APP_TOKEN,
   logger: {
-    debug: (...msgs) => {
-      logger.debug(JSON.stringify(msgs))
+    debug: msgs => {
+      logger.debug(msgs)
     },
-    info: (...msgs) => {
-      logger.info(JSON.stringify(msgs))
+    info: msgs => {
+      logger.info(msgs)
     },
-    warn: (...msgs) => {
-      logger.warn(JSON.stringify(msgs))
+    warn: msgs => {
+      logger.warn(msgs)
     },
-    error: (...msgs) => {
-      logger.error(JSON.stringify(msgs))
+    error: msgs => {
+      logger.error(msgs)
     },
     setLevel: _level => {
       // Not empty

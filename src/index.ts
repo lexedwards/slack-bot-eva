@@ -7,5 +7,5 @@ slackClient.event('app_mention', appMention)
 slackClient.message(directMessage)
 ;(async () => {
   await slackClient.start()
-  logger.info(`⚡️ app has started`)
+  logger.info(`⚡️ Slack App is starting...`)
 })()
