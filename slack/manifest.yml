@@ -1,0 +1,35 @@
+display_information:
+  name: Eva
+  description: Evvvvaaaaaaaaaaa
+  background_color: "#2c2d30"
+  long_description: "Testing bot for testing purposes - shortcuts, commands, conversations etc.\r
+
+    \r
+
+    Not really to be used in Production, this is a testing bot after all. Testing does not go into production. I can't beleive Slack makes you write such a long description!"
+features:
+  bot_user:
+    display_name: Eva
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - app_mentions:read
+      - chat:write
+      - im:history
+      - im:read
+      - im:write
+      - mpim:history
+      - mpim:read
+      - mpim:write
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+      - message.im
+      - message.mpim
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
