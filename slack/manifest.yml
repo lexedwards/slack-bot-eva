@@ -1,16 +1,23 @@
 display_information:
   name: Eva
   description: Evvvvaaaaaaaaaaa
-  background_color: "#2c2d30"
-  long_description: "Testing bot for testing purposes - shortcuts, commands, conversations etc.\r
+  background_color: '#2c2d30'
+  long_description: "Testing bot for testing purposes - shortcuts, commands,
+    conversations etc.\r
 
     \r
 
-    Not really to be used in Production, this is a testing bot after all. Testing does not go into production. I can't beleive Slack makes you write such a long description!"
+    Not really to be used in Production, this is a testing bot after all.
+    Testing does not go into production. I can't beleive Slack makes you write
+    such a long description!"
 features:
   bot_user:
     display_name: Eva
     always_online: false
+  slash_commands:
+    - command: /hieva
+      description: Say hello to the user
+      should_escape: true
 oauth_config:
   scopes:
     bot:
@@ -22,6 +29,7 @@ oauth_config:
       - mpim:history
       - mpim:read
       - mpim:write
+      - commands
 settings:
   event_subscriptions:
     bot_events:
